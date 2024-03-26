@@ -79,3 +79,10 @@ function updateRow(employeeData) {
   selectedRow.cells[4].innerHTML = employeeData.employeeSalary;
   selectedRow.cells[5].innerHTML = employeeData.employeeAddress;
 }
+function deleteEmployeeData(obj)
+{
+  let row = obj.parentElement.parentElement;
+  if(confirm()){
+    document.write.getElementById("table-body").deleteRow(row.index);
+  }
+}
